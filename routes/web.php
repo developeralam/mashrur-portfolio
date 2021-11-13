@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Frontend\Home;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Home::class);
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/admin/dashboard', function () {
+//     return view('livewire.backend.home');
+// })->name('admin.dashboard');
